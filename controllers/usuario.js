@@ -16,9 +16,9 @@ const usuarioGet = (req = request, res = response) => {
   }
 
 
-const usuarioPost = (req, res= response) => {
+const usuarioPost = (req = request, res= response) => {
 
-    const body = req.body();
+    const body = req.body;
 
     res.json({
         ok: true,
@@ -27,7 +27,7 @@ const usuarioPost = (req, res= response) => {
     });
 }
 
-const usuarioPut = (req, res = response) => {
+const usuarioPut = (req = request, res = response) => {
 
     const { id } = req.params;
 
@@ -38,7 +38,7 @@ const usuarioPut = (req, res = response) => {
     });
 }
 
-const usuarioDelete = (req, res) => {
+const usuarioDelete = (req = request, res = response) => {
     res.json({
         ok: true,
         msg: 'delete World - controlador'
